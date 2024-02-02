@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="articles">
+    <h1><%= @article.title %></h1>
+  </div>
+  <div class="articles">
+    <p><%= @article.content %></p>
+  </div>
+  <div class="icons">
+    <%= link_to edit_article_path do %>
+      <i class="fa-solid fa-pen-to-square"></i>
+    <% end %>
+    <%= link_to article_path(@article),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure you wanna delete or you just want a donut ??"} do %>
+        <i class="fa-solid fa-trash"></i>
+    <% end %>
+  </div>
+</div>

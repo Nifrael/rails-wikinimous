@@ -1,0 +1,15 @@
+<div class="container">
+  <%= form_with model: @article do |f| %>
+  <div class="articles">
+    <%= f.label :title %>
+    <%= f.text_field :title, id: "title" %>
+  </div>
+  <div class="articles">
+    <%= f.label :content %>
+    <%= f.text_area :content, id: "text-area" %>
+  </div>
+  <div class="articles">
+    <%= f.submit "Create", id: "btn" %>
+  </div>
+  <% end %>
+</div>
